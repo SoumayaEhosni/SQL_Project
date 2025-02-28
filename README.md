@@ -4,8 +4,10 @@
 (fill in your description and goals here)
 
 ## Process
-### (your step 1)
-### (your step 2)
+### I've read the project instructions
+### I've created my repository
+### I've downloded the .csv files 
+### I've created my e-commerce database in PGAdmin
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)

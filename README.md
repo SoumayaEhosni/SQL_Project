@@ -93,7 +93,14 @@ CREATE TABLE analytics (
 );
 
 
-### I've exported the .csv files to my tables
+### I've exported the .csv files into my tables.
+### The data in the tables has been cleaned.
+## I have set the primary key for the table:
+ALTER TABLE sales_report
+ADD PRIMARY KEY (product_sku);
+
+ALTER TABLE products
+ADD PRIMARY KEY (product_sku);
 
 
 ## Results

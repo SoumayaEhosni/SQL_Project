@@ -31,4 +31,20 @@ SET
     transactions = CASE 
                   WHEN transactions IS NULL THEN 0 
                   ELSE transactions 
-                  END;
+                  END,
+	product_refund_amount = Case
+								When product_refund_amount IS NULL THEN 0
+								ELSE product_refund_amount
+								END,
+	time_on_site = Case
+								 WHEN  time_on_site IS NULL THEN 0
+								ELSE time_on_site
+								END,					
+    session_quality_dim = Case
+								WHEN  session_quality_dim IS NULL THEN 0
+								ELSE session_quality_dim
+								END,					
+     item_quantity = Case
+								 WHEN  item_quantity IS NULL THEN 0
+								ELSE item_quantity
+								END;

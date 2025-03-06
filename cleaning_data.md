@@ -48,3 +48,5 @@ SET
 								 WHEN  item_quantity IS NULL THEN 0
 								ELSE item_quantity
 								END;
+--To clean from sales_by_sku products that are not in product
+DELETE FROM sales_by_sku WHERE product_sku NOT IN (SELECT product_sku FROM products);

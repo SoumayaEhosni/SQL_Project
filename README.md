@@ -58,7 +58,23 @@ CREATE TABLE sales_report (
     sentiment_magnitude DECIMAL(20,10),
     ratio DECIMAL(20,10)
 );
+CREATE TABLE products (
+    product_sku VARCHAR(255),
+    name VARCHAR(255),
+    ordered_Quantity INT,
+    stockLevel INT,
+    restock_in_gLeadTime INT,
+    sentiment_Score DECIMAL(10, 10),
+    sentiment_magnitude DECIMAL(10, 10)
+);
 
+-- update sentiment_Score
+ALTER TABLE products
+ALTER COLUMN sentiment_Score TYPE DECIMAL(20, 10);
+
+-- Update sentiment_magnitude
+ALTER TABLE products
+ALTER COLUMN sentiment_magnitude TYPE DECIMAL(20, 10);
 CREATE TABLE analytics (
     visitnumber INT,
     visitid BIGINT,
@@ -75,40 +91,7 @@ CREATE TABLE analytics (
     revenue BIGINT,
     unit_price BIGINT
 );
-CREATE TABLE all_sessions (
-    full_visitor_id NUMERIC(20,0),
-    channel_grouping TEXT,
-    visit_time INT,
-    country TEXT,
-    city TEXT,
-    total_transaction_revenue BIGINT,
-    transactions INT,
-    time_on_site INT,
-    pageviews INT,
-    session_quality_dim INT,
-    visit_date DATE,
-    visit_id BIGINT,
-    visit_type TEXT,
-    product_refund_amount BIGINT,
-    product_quantity INT,
-    product_price BIGINT,
-    product_revenue BIGINT,
-    product_sku VARCHAR(255), 
-    product_name TEXT,
-    product_category TEXT,
-    product_variant TEXT,
-    currency_code TEXT,
-    item_quantity INT,
-    item_revenue BIGINT,
-    transaction_revenue BIGINT,
-    transaction_id TEXT,
-    page_title TEXT,
-    search_keyword TEXT,
-    page_path_level1 TEXT,
-    ecommerce_action_type INT,
-    ecommerce_action_step INT,
-    ecommerce_action_option TEXT
-);
+
 
 ### I've exported the .csv files to my tables
 

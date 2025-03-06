@@ -95,12 +95,30 @@ CREATE TABLE analytics (
 
 ### I've exported the .csv files into my tables.
 ### The data in the tables has been cleaned.
-## I have set the primary key for the table:
-ALTER TABLE sales_report
+## I have set the primary/Foreign keys for the table:
+ALTER TABLE products 
 ADD PRIMARY KEY (product_sku);
 
-ALTER TABLE products
+ALTER TABLE sales_report 
 ADD PRIMARY KEY (product_sku);
+
+ALTER TABLE sales_report 
+ADD CONSTRAINT fk_sales_report_product_sku
+FOREIGN KEY (product_sku) REFERENCES products(product_sku);
+
+ALTER TABLE sales_by_sku 
+ADD PRIMARY KEY (product_sku);
+
+ALTER TABLE sales_by_sku 
+ADD CONSTRAINT fk_sales_by_sku_product_sku
+FOREIGN KEY (product_sku) REFERENCES products(product_sku);
+
+ALTER TABLE analytics
+ADD COLUMN all_sessions_id INT;
+
+ALTER TABLE analytics
+ADD CONSTRAINT fk_analytics_all_sessions_id
+FOREIGN KEY (all_sessions_id) REFERENCES all_sessions(id);
 
 
 ## Results

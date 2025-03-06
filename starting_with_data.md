@@ -1,9 +1,6 @@
-Question 1: 
+Question 1: Display information from both tables where product_sku matches in both tables.
 
-SQL Queries:Display information from both tables where product_sku matches in both tables.
-
-Answer: 
-
+SQL Queries:
 SELECT 
     sr.product_sku, 
     sr.name, 
@@ -22,21 +19,38 @@ FROM sales_report sr
 JOIN products p 
 ON sr.product_sku = p.product_sku;
 
+Answer: This joins the sales_report and products tables on the product_sku column and displays several fields from both tables.
 
 
-Question 2: 
-
-SQL Queries:
-
-Answer:
-
-
-
-Question 3: 
+Question 2: Select Products with Low Stock Level (stockLevel < 100)
 
 SQL Queries:
+SELECT 
+    sr.product_sku, 
+    sr.name, 
+    sr.stockLevel AS stockLevel_report, 
+    p.stockLevel AS stockLevel_product
+FROM sales_report sr
+INNER JOIN products p 
+    ON sr.product_sku = p.product_sku
+WHERE sr.stockLevel < 100 OR p.stockLevel < 100;
 
-Answer:
+Answer:This returns products that have a low stock level in either of the tables.
+
+
+
+Question 3: Select Products Not in sales_report
+
+SQL Queries:
+SELECT 
+    p.product_sku, 
+    p.name
+FROM products p
+LEFT JOIN sales_report sr 
+    ON p.product_sku = sr.product_sku
+WHERE sr.product_sku IS NULL;
+
+Answer: This returns products that are not in the sales report.
 
 
 

@@ -4,11 +4,11 @@
 (fill in your description and goals here)
 
 ## Process
-### I've read the project instructions
-### I've created my repository
-### I've downloded the .csv files 
-### I've created my e-commerce database in PGAdmin
-### I've created my five tables under e-commerce database
+I've reviewed the project instructions.
+I've set up my repository.
+I've downloaded the .csv files.
+I've created the e-commerce database in PGAdmin.
+I've created five tables within the e-commerce database.
 CREATE TABLE all_sessions (
     full_visitor_id NUMERIC(20,0),
     channel_grouping TEXT,

@@ -8,6 +8,9 @@
 ### I've created my repository
 ### I've downloded the .csv files 
 ### I've created my e-commerce database in PGAdmin
+### I've created my five tables under e-commerce database
+### I've exported the .csv files to my tables
+
 
 ## Results
 (fill in what you discovered this data could tell you and how you used the data to answer those questions)

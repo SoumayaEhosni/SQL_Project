@@ -7,10 +7,10 @@ Duplicates in visit_id and other fields required additional handling to maintain
 ## Foreign Key Constraints:
 Ensuring all referenced product_sku values exist in the products table before linking with sales_by_sku.
 
-## Large Data Processing
+## Large Data Processing:
 Query performance could be impacted due to large datasets, requiring indexing and optimization.
 
-## Data Cleaning Complexity
+## Data Cleaning Complexity:
 Handling noisy data from CSV files required significant preprocessing before analysis.
 
 
